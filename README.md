@@ -1,4 +1,5 @@
-# SBML Fitting and Amplification Prediction
+# SAMPL: 
+# **S**BML-based **A**utomated **M**odel selection and **P**erformance prediction under **L**eak for biochemical circuits
 
 This project fits candidate SBML models to time-course data, compares their predictions, and uses the selected fitted model to predict amplification.
 
