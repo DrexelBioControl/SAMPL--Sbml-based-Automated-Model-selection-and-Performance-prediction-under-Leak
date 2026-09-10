@@ -1,5 +1,5 @@
-# SAMPL: 
-# **S**BML-based **A**utomated **M**odel selection and **P**erformance prediction under **L**eak for biochemical circuits
+# SAMPL: **S**BML-based **A**utomated **M**odel selection and **P**erformance prediction under **L**eak
+# _A automated Python framework for SBML-compatible model selection and prediction for leaky biochemical circuits._
 
 This project fits candidate SBML models to time-course data, compares their predictions, and uses the selected fitted model to predict amplification.
 
