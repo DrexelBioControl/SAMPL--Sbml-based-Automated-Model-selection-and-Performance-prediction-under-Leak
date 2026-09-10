@@ -1,0 +1,60 @@
+{
+  "enabled": true,
+
+  "selected_model_file": "results/selected_model.json",
+
+  "input_control": {
+    "type": "species_initial_concentration",
+    "id": "dna_Input_1",
+    "on_value": 2.5,
+    "off_value": 0.0,
+    "label": "Input",
+    "units": "nM"
+  },
+
+  "amplification_control": {
+    "type": "species_initial_concentration",
+    "id": "rna_Gate_1_2",
+    "reference_value": 0.0,
+    "values": {
+      "start": 0.0,
+      "stop": 50.0,
+      "points": 51
+    },
+    "values_to_plot": [
+      1,
+      3,
+      5,
+      10,
+      30,
+      50
+    ],
+    "label": "Fuel",
+    "units": "nM"
+  },
+
+  "fixed_initial_species": {
+    "dna_Gate_1_2": 25.0,
+    "dna_Reporter_2": 500.0
+  },
+
+  "observable_id": "rnadna_ReporterOut_2",
+
+  "time_end_min": 200.0,
+  "time_points": 1000,
+  "model_time_units_per_minute": 60.0,
+
+  "rate_floor": 1e-08,
+  "rtol": 1e-06,
+  "atol": 1e-06,
+
+  "sweep_parameter": "ktx__",
+  "sweep_values": [
+    3.3333333333333337e-06,
+    1e-05,
+    3e-05
+  ],
+
+  "output_file": "figures/amplification_prediction_selected_model.png",
+  "generated_models_dir": "generated_models"
+}

@@ -1,0 +1,37 @@
+Rate Equations
+
+uRSDg' = k_txn*RSD_temp - kRz*uRSDg
+RSDg' = kRz*uRSDg - ksd*RSDg*IN + krev*I_RSDg*OUT - klkg*RSDg*F
+IN' = k_txn*IN_temp - ksd*RSDg*IN + krev*I_RSDg*OUT + kfsd*I_RSDg*F
+OUT' = ksd*RSDg*IN - kf_rep*OUT*DRL - krev*I_RSDg*OUT + klkg*RSDg*F + basal_frac*k_txn*RSD_temp
+DRL' = -kf_rep*OUT*DRL
+ROL' = kf_rep*OUT*DRL
+I_RSDg' = ksd*RSDg*IN - krev*I_RSDg*OUT - kfsd*I_RSDg*F
+F' = k_txn*F_temp - kfsd*I_RSDg*F + ksd*F_RSDg*IN - klkg*RSDg*F
+F_RSDg' = kfsd*I_RSDg*F - ksd*F_RSDg*IN + klkg*RSDg*F
+
+Rate Constants
+
+k_txn = 0.00962763757 | 1/s
+ksd = 9.97801643e-06 | 1/(nM*s)
+kfsd = 2.29972555e-06 | 1/(nM*s)
+krev = 1.42705205e-06 | 1/(nM*s)
+kf_rep = 4.77116458e-06 | 1/(nM*s)
+kRz = 0.0406799972 | 1/s
+klkg = 6.98976431e-05 | 1/(nM*s)
+basal_frac = 0.0220510273 | dimensionless
+
+Initial Conditions
+
+uRSDg = 0 | nM
+RSDg = 0 | nM
+IN = 0 | nM
+OUT = 0 | nM
+DRL = 500 | nM
+ROL = 0 | nM
+I_RSDg = 0 | nM
+F = 0 | nM
+F_RSDg = 0 | nM
+RSD_temp = 0 | nM
+IN_temp = 0 | nM
+F_temp = 0 | nM

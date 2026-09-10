@@ -1,0 +1,61 @@
+RUN SUMMARY
+============================================================
+
+Run name       : Figure2D_compare_all_SBML_models
+Model          : model1_activegate_fuel
+SBML file      : C:\Users\namhn\GitHub Projects\GITHUB-Predictive-Analysis-of-Amplification-in-Biochemical-Feedback-Circuits\_FinalProduct_\models\model1_activegate_fuel.xml
+Mode           : fit
+Fit conditions : ['fig2d_50nM_I0', 'fig2d_50nM_I1', 'fig2d_25nM_I1', 'fig2d_12p5nM_I1', 'fig2d_6p25nM_I1']
+Held-out conditions: ['fig2d_2p5nM_I1']
+Fit parameters : ['k_txn', 'ksd', 'kfsd', 'krev', 'kf_rep', 'kRz', 'klkg', 'basal_frac']
+N starts       : 8
+Random seed    : 20260806
+Observable     : ROL
+Time conversion: 60.0 model units per minute
+
+BEST-FIT PARAMETERS
+------------------------------------------------------------
+ktx__                = 1.30000000e-02
+kmat__               = 4.17000000e-03
+kx__                 = 1.00000000e-06
+krev__               = 2.70000000e-07
+krep__               = 1.00000000e-05
+k_txn                = 2.52577409e-02
+ksd                  = 2.61880083e-07
+kfsd                 = 2.34544952e-07
+krev                 = 4.14314503e-05
+kf_rep               = 2.71015171e-05
+kRz                  = 4.12516831e-03
+klkg                 = 1.62506156e-08
+basal_frac           = 1.42999286e-02
+
+FIT STATISTICS
+------------------------------------------------------------
+Best cost (0.5 * SSE)  = 7.31255409e-03
+Global normalized RMSE = 3.63311934e-03
+Optimizer success      = True
+Optimizer message      = `xtol` termination condition is satisfied.
+
+RMSE PER DATASET
+------------------------------------------------------------
+fig2d_50nM_I0            | RMSE=1.56306298e+01 | nRMSE=9.57843412e-02
+fig2d_50nM_I1            | RMSE=2.34833400e+01 | nRMSE=4.94771953e-02
+fig2d_25nM_I1            | RMSE=2.04207953e+01 | nRMSE=4.29537432e-02
+fig2d_12p5nM_I1          | RMSE=1.45537019e+01 | nRMSE=3.06904266e-02
+fig2d_6p25nM_I1          | RMSE=6.92010230e+00 | nRMSE=1.46815859e-02
+
+HELD-OUT PREDICTION RMSE
+------------------------------------------------------------
+fig2d_2p5nM_I1           | RMSE=5.84511717e+01 | nRMSE=1.23023213e-01
+Combined held-out nRMSE = 1.23023213e-01
+
+BOUNDARY PROXIMITY
+------------------------------------------------------------
+k_txn           | value=2.52577409e-02 | not within 5% of bound
+ksd             | value=2.61880083e-07 | not within 5% of bound
+kfsd            | value=2.34544952e-07 | near lower bound
+krev            | value=4.14314503e-05 | not within 5% of bound
+kf_rep          | value=2.71015171e-05 | not within 5% of bound
+kRz             | value=4.12516831e-03 | near lower bound
+klkg            | value=1.62506156e-08 | not within 5% of bound
+basal_frac      | value=1.42999286e-02 | not within 5% of bound

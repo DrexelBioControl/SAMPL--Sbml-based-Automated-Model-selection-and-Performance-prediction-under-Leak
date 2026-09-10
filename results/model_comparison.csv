@@ -1,0 +1,4 @@
+model,model_file,number_of_fitted_parameters,best_cost,global_normalized_rmse,held_out_normalized_rmse,optimizer_success,rank,selected
+model1_activegate_fuel,model1_activegate_fuel.xml,8,0.007312554092440492,0.0036331193379159446,0.12302321307191473,True,1,True
+Figure2D_base_model_decay,Figure2D_base_model_decay.xml,5,0.22138451125629638,0.019990273413551637,0.04167746433923194,True,2,False
+Figure2D_base_model,Figure2D_base_model.xml,5,0.2214865295806423,0.019994878838053804,0.04182588578654475,True,3,False

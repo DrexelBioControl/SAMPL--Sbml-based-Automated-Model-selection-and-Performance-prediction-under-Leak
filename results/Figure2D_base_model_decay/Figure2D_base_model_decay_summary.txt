@@ -1,0 +1,54 @@
+RUN SUMMARY
+============================================================
+
+Run name       : Figure2D_compare_all_SBML_models
+Model          : Figure2D_base_model_decay
+SBML file      : C:\Users\namhn\GitHub Projects\GITHUB-Predictive-Analysis-of-Amplification-in-Biochemical-Feedback-Circuits\_FinalProduct_\models\Figure2D_base_model_decay.xml
+Mode           : fit
+Fit conditions : ['fig2d_50nM_I0', 'fig2d_50nM_I1', 'fig2d_25nM_I1', 'fig2d_12p5nM_I1', 'fig2d_6p25nM_I1']
+Held-out conditions: ['fig2d_2p5nM_I1']
+Fit parameters : ['ktx__', 'kmat__', 'kx__', 'krev__', 'krep__']
+N starts       : 8
+Random seed    : 20260806
+Observable     : rnadna_ReporterOut_2
+Time conversion: 60.0 model units per minute
+
+BEST-FIT PARAMETERS
+------------------------------------------------------------
+ktx__                = 2.01875509e-02
+kmat__               = 1.17978521e-02
+kx__                 = 8.29673626e-07
+krev__               = 8.07644397e-07
+krep__               = 3.34318698e-06
+
+MODEL-SPECIFIC FIXED PARAMETERS
+------------------------------------------------------------
+k_test_decay         = 1.00000000e-04
+
+FIT STATISTICS
+------------------------------------------------------------
+Best cost (0.5 * SSE)  = 2.21384511e-01
+Global normalized RMSE = 1.99902734e-02
+Optimizer success      = True
+Optimizer message      = `ftol` termination condition is satisfied.
+
+RMSE PER DATASET
+------------------------------------------------------------
+fig2d_50nM_I0            | RMSE=1.07860406e+02 | nRMSE=6.60967476e-01
+fig2d_50nM_I1            | RMSE=2.26947840e+01 | nRMSE=4.78157819e-02
+fig2d_25nM_I1            | RMSE=1.90596404e+01 | nRMSE=4.00906472e-02
+fig2d_12p5nM_I1          | RMSE=1.70999281e+01 | nRMSE=3.60598350e-02
+fig2d_6p25nM_I1          | RMSE=1.24447572e+01 | nRMSE=2.64026115e-02
+
+HELD-OUT PREDICTION RMSE
+------------------------------------------------------------
+fig2d_2p5nM_I1           | RMSE=1.98019265e+01 | nRMSE=4.16774643e-02
+Combined held-out nRMSE = 4.16774643e-02
+
+BOUNDARY PROXIMITY
+------------------------------------------------------------
+ktx__           | value=2.01875509e-02 | not within 5% of bound
+kmat__          | value=1.17978521e-02 | near upper bound
+kx__            | value=8.29673626e-07 | not within 5% of bound
+krev__          | value=8.07644397e-07 | near upper bound
+krep__          | value=3.34318698e-06 | near lower bound

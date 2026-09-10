@@ -1,0 +1,17 @@
+{
+  "run_name": "Figure2D_compare_all_SBML_models",
+  "selection_metric": "global_normalized_rmse",
+  "model_name": "model1_activegate_fuel",
+  "model_file": "C:\\Users\\namhn\\GitHub Projects\\GITHUB-Predictive-Analysis-of-Amplification-in-Biochemical-Feedback-Circuits\\_FinalProduct_\\models\\model1_activegate_fuel.xml",
+  "fit_results_file": "C:\\Users\\namhn\\GitHub Projects\\GITHUB-Predictive-Analysis-of-Amplification-in-Biochemical-Feedback-Circuits\\_FinalProduct_\\results\\model1_activegate_fuel\\model1_activegate_fuel_results.npz",
+  "fitted_parameters_file": "C:\\Users\\namhn\\GitHub Projects\\GITHUB-Predictive-Analysis-of-Amplification-in-Biochemical-Feedback-Circuits\\_FinalProduct_\\results\\model1_activegate_fuel\\fitted_parameters.csv",
+  "global_normalized_rmse": 0.0036331193379159446,
+  "held_out_normalized_rmse": 0.12302321307191473,
+  "observable_id": "ROL",
+  "species_aliases": {
+    "dna_Input_1": "IN_temp",
+    "dna_Gate_1_2": "RSD_temp",
+    "dna_Reporter_2": "DRL"
+  },
+  "model_time_units_per_minute": 60.0
+}

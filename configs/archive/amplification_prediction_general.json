@@ -1,0 +1,91 @@
+{
+  "enabled": true,
+  "selected_model_file": "results/selected_model.json",
+
+  "model_interfaces": {
+    "Figure2D_base_model": {
+      "input_control": {
+        "type": "species_initial_concentration",
+        "id": "dna_Input_1"
+      },
+      "observable_id": "rnadna_ReporterOut_2",
+      "amplification_control": null,
+      "fixed_initial_species": {
+        "dna_Gate_1_2": 25.0,
+        "dna_Reporter_2": 500.0
+      }
+    },
+
+    "Figure2D_base_model_decay": {
+      "input_control": {
+        "type": "species_initial_concentration",
+        "id": "dna_Input_1"
+      },
+      "observable_id": "rnadna_ReporterOut_2",
+      "amplification_control": null,
+      "fixed_initial_species": {
+        "dna_Gate_1_2": 25.0,
+        "dna_Reporter_2": 500.0
+      },
+      "fixed_parameters": {
+        "k_test_decay": 0.0001
+      }
+    },
+
+    "model1_activegate_fuel": {
+      "input_control": {
+        "type": "species_initial_concentration",
+        "id": "IN_temp"
+      },
+      "observable_id": "ROL",
+      "amplification_control": {
+        "type": "species_initial_concentration",
+        "id": "F_temp"
+      },
+      "fixed_initial_species": {
+        "RSD_temp": 25.0,
+        "DRL": 500.0
+      }
+    }
+  },
+
+  "input_values": {
+    "on_value": 2.5,
+    "off_value": 0.0,
+    "label": "Input",
+    "units": "nM"
+  },
+
+  "amplification_values": {
+    "reference_value": 0.0,
+    "values": {
+      "start": 0.0,
+      "stop": 50.0,
+      "points": 51
+    },
+    "values_to_plot": [
+      1,
+      3,
+      5,
+      10,
+      30,
+      50
+    ],
+    "label": "Fuel template",
+    "units": "nM"
+  },
+
+  "time_end_min": 200.0,
+  "time_points": 1000,
+  "model_time_units_per_minute": 60.0,
+
+  "rate_floor": 1e-08,
+  "rtol": 1e-06,
+  "atol": 1e-06,
+
+  "sweep_parameter": null,
+  "sweep_values": null,
+
+  "output_file": "figures/amplification_prediction_general_interface.png",
+  "generated_models_dir": "generated_models"
+}

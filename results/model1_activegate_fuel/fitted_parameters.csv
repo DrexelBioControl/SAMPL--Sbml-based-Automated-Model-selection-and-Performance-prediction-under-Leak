@@ -1,0 +1,14 @@
+parameter,value,fitted
+ktx__,0.013,False
+kmat__,0.00417,False
+kx__,1e-06,False
+krev__,2.7e-07,False
+krep__,1e-05,False
+k_txn,0.025257740883753883,True
+ksd,2.618800826557054e-07,True
+kfsd,2.3454495172389484e-07,True
+krev,4.1431450277540585e-05,True
+kf_rep,2.710151711525918e-05,True
+kRz,0.004125168311928119,True
+klkg,1.6250615591710748e-08,True
+basal_frac,0.01429992863285118,True

@@ -1,0 +1,50 @@
+RUN SUMMARY
+============================================================
+
+Run name       : Figure2D_compare_all_SBML_models
+Model          : Figure2D_base_model
+SBML file      : C:\Users\namhn\GitHub Projects\GITHUB-Predictive-Analysis-of-Amplification-in-Biochemical-Feedback-Circuits\_FinalProduct_\models\Figure2D_base_model.xml
+Mode           : fit
+Fit conditions : ['fig2d_50nM_I0', 'fig2d_50nM_I1', 'fig2d_25nM_I1', 'fig2d_12p5nM_I1', 'fig2d_6p25nM_I1']
+Held-out conditions: ['fig2d_2p5nM_I1']
+Fit parameters : ['ktx__', 'kmat__', 'kx__', 'krev__', 'krep__']
+N starts       : 8
+Random seed    : 20260806
+Observable     : rnadna_ReporterOut_2
+Time conversion: 60.0 model units per minute
+
+BEST-FIT PARAMETERS
+------------------------------------------------------------
+ktx__                = 1.79950291e-02
+kmat__               = 6.78749451e-03
+kx__                 = 1.14785460e-06
+krev__               = 8.09743152e-07
+krep__               = 3.33621126e-06
+
+FIT STATISTICS
+------------------------------------------------------------
+Best cost (0.5 * SSE)  = 2.21486530e-01
+Global normalized RMSE = 1.99948788e-02
+Optimizer success      = True
+Optimizer message      = Both `ftol` and `xtol` termination conditions are satisfied.
+
+RMSE PER DATASET
+------------------------------------------------------------
+fig2d_50nM_I0            | RMSE=1.07860406e+02 | nRMSE=6.60967476e-01
+fig2d_50nM_I1            | RMSE=2.28364239e+01 | nRMSE=4.81142038e-02
+fig2d_25nM_I1            | RMSE=1.90731374e+01 | nRMSE=4.01190371e-02
+fig2d_12p5nM_I1          | RMSE=1.81052879e+01 | nRMSE=3.81799087e-02
+fig2d_6p25nM_I1          | RMSE=1.25844539e+01 | nRMSE=2.66989898e-02
+
+HELD-OUT PREDICTION RMSE
+------------------------------------------------------------
+fig2d_2p5nM_I1           | RMSE=1.98724450e+01 | nRMSE=4.18258858e-02
+Combined held-out nRMSE = 4.18258858e-02
+
+BOUNDARY PROXIMITY
+------------------------------------------------------------
+ktx__           | value=1.79950291e-02 | not within 5% of bound
+kmat__          | value=6.78749451e-03 | not within 5% of bound
+kx__            | value=1.14785460e-06 | not within 5% of bound
+krev__          | value=8.09743152e-07 | near upper bound
+krep__          | value=3.33621126e-06 | near lower bound

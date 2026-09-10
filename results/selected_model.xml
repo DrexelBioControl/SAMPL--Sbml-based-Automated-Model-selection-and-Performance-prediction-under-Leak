@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level3/version2/core" level="3" version="2">
+  <model id="model">
+    <listOfUnitDefinitions>
+      <unitDefinition id="per_second">
+        <listOfUnits>
+          <unit kind="second" exponent="-1" scale="0" multiplier="1"/>
+        </listOfUnits>
+      </unitDefinition>
+    </listOfUnitDefinitions>
+    <listOfCompartments>
+      <compartment id="default" spatialDimensions="3" size="1" constant="true"/>
+    </listOfCompartments>
+    <listOfSpecies>
+      <species id="uRSDg" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="RSDg" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="IN" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="OUT" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="DRL" compartment="default" initialConcentration="500" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="ROL" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="I_RSDg" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="F" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="F_RSDg" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false"/>
+      <species id="F_temp" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="true"/>
+      <species id="IN_temp" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="true"/>
+      <species id="RSD_temp" compartment="default" initialConcentration="0" hasOnlySubstanceUnits="false" boundaryCondition="true" constant="true"/>
+    </listOfSpecies>
+    <listOfParameters>
+      <parameter id="k_txn" value="0.00962763757" units="per_second" constant="true"/>
+      <parameter id="ksd" value="9.97801643e-06" constant="true"/>
+      <parameter id="kfsd" value="2.29972555e-06" constant="true"/>
+      <parameter id="krev" value="1.42705205e-06" constant="true"/>
+      <parameter id="kf_rep" value="4.77116458e-06" constant="true"/>
+      <parameter id="kRz" value="0.0406799972" units="per_second" constant="true"/>
+      <parameter id="klkg" value="6.98976431e-05" constant="true"/>
+      <parameter id="basal_frac" value="0.0220510273" units="dimensionless" constant="true"/>
+    </listOfParameters>
+    <listOfReactions>
+      <reaction id="d_uRSDg_dt" reversible="false">
+        <listOfProducts>
+          <speciesReference species="uRSDg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="RSD_temp"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <times/>
+                <ci> k_txn </ci>
+                <ci> RSD_temp </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kRz </ci>
+                <ci> uRSDg </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="d_RSDg_dt" reversible="false">
+        <listOfProducts>
+          <speciesReference species="RSDg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F"/>
+          <modifierSpeciesReference species="IN"/>
+          <modifierSpeciesReference species="I_RSDg"/>
+          <modifierSpeciesReference species="OUT"/>
+          <modifierSpeciesReference species="uRSDg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> kRz </ci>
+                    <ci> uRSDg </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> ksd </ci>
+                    <ci> RSDg </ci>
+                    <ci> IN </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> krev </ci>
+                  <ci> I_RSDg </ci>
+                  <ci> OUT </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> klkg </ci>
+                <ci> RSDg </ci>
+                <ci> F </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="d_IN_dt" reversible="false">
+        <listOfProducts>
+          <speciesReference species="IN" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F"/>
+          <modifierSpeciesReference species="IN_temp"/>
+          <modifierSpeciesReference species="I_RSDg"/>
+          <modifierSpeciesReference species="OUT"/>
+          <modifierSpeciesReference species="RSDg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <plus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> k_txn </ci>
+                  <ci> IN_temp </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> ksd </ci>
+                  <ci> RSDg </ci>
+                  <ci> IN </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> krev </ci>
+                <ci> I_RSDg </ci>
+                <ci> OUT </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kfsd </ci>
+                <ci> I_RSDg </ci>
+                <ci> F </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="d_OUT_dt" reversible="false">
+        <listOfProducts>
+          <speciesReference species="OUT" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="DRL"/>
+          <modifierSpeciesReference species="F"/>
+          <modifierSpeciesReference species="IN"/>
+          <modifierSpeciesReference species="I_RSDg"/>
+          <modifierSpeciesReference species="RSD_temp"/>
+          <modifierSpeciesReference species="RSDg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <plus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> ksd </ci>
+                    <ci> RSDg </ci>
+                    <ci> IN </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> kf_rep </ci>
+                    <ci> OUT </ci>
+                    <ci> DRL </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> krev </ci>
+                  <ci> I_RSDg </ci>
+                  <ci> OUT </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> klkg </ci>
+                <ci> RSDg </ci>
+                <ci> F </ci>
+              </apply>
+              <apply>
+                <times/>
+                <ci> basal_frac </ci>
+                <ci> k_txn </ci>
+                <ci> RSD_temp </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="d_DRL_dt" reversible="false">
+        <listOfProducts>
+          <speciesReference species="DRL" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="OUT"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <apply>
+                <minus/>
+                <ci> kf_rep </ci>
+              </apply>
+              <ci> OUT </ci>
+              <ci> DRL </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="d_ROL_dt" reversible="false">
+        <listOfProducts>
+          <speciesReference species="ROL" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="DRL"/>
+          <modifierSpeciesReference species="OUT"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <times/>
+              <ci> kf_rep </ci>
+              <ci> OUT </ci>
+              <ci> DRL </ci>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="d_I_RSDg_dt" reversible="false">
+        <listOfProducts>
+          <speciesReference species="I_RSDg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F"/>
+          <modifierSpeciesReference species="IN"/>
+          <modifierSpeciesReference species="OUT"/>
+          <modifierSpeciesReference species="RSDg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> ksd </ci>
+                  <ci> RSDg </ci>
+                  <ci> IN </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> krev </ci>
+                  <ci> I_RSDg </ci>
+                  <ci> OUT </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> kfsd </ci>
+                <ci> I_RSDg </ci>
+                <ci> F </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="d_F_dt" reversible="false">
+        <listOfProducts>
+          <speciesReference species="F" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F_RSDg"/>
+          <modifierSpeciesReference species="F_temp"/>
+          <modifierSpeciesReference species="IN"/>
+          <modifierSpeciesReference species="I_RSDg"/>
+          <modifierSpeciesReference species="RSDg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <minus/>
+              <apply>
+                <plus/>
+                <apply>
+                  <minus/>
+                  <apply>
+                    <times/>
+                    <ci> k_txn </ci>
+                    <ci> F_temp </ci>
+                  </apply>
+                  <apply>
+                    <times/>
+                    <ci> kfsd </ci>
+                    <ci> I_RSDg </ci>
+                    <ci> F </ci>
+                  </apply>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> ksd </ci>
+                  <ci> F_RSDg </ci>
+                  <ci> IN </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> klkg </ci>
+                <ci> RSDg </ci>
+                <ci> F </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+      <reaction id="d_F_RSDg_dt" reversible="false">
+        <listOfProducts>
+          <speciesReference species="F_RSDg" stoichiometry="1" constant="true"/>
+        </listOfProducts>
+        <listOfModifiers>
+          <modifierSpeciesReference species="F"/>
+          <modifierSpeciesReference species="IN"/>
+          <modifierSpeciesReference species="I_RSDg"/>
+          <modifierSpeciesReference species="RSDg"/>
+        </listOfModifiers>
+        <kineticLaw>
+          <math xmlns="http://www.w3.org/1998/Math/MathML">
+            <apply>
+              <plus/>
+              <apply>
+                <minus/>
+                <apply>
+                  <times/>
+                  <ci> kfsd </ci>
+                  <ci> I_RSDg </ci>
+                  <ci> F </ci>
+                </apply>
+                <apply>
+                  <times/>
+                  <ci> ksd </ci>
+                  <ci> F_RSDg </ci>
+                  <ci> IN </ci>
+                </apply>
+              </apply>
+              <apply>
+                <times/>
+                <ci> klkg </ci>
+                <ci> RSDg </ci>
+                <ci> F </ci>
+              </apply>
+            </apply>
+          </math>
+        </kineticLaw>
+      </reaction>
+    </listOfReactions>
+  </model>
+</sbml>

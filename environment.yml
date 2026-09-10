@@ -1,0 +1,14 @@
+name: SBMLtoODEpyWorkflow
+channels:
+  - conda-forge
+dependencies:
+  - python=3.7
+  - numpy<1.22
+  - scipy<1.8
+  - pandas<1.4
+  - matplotlib<3.6
+  - openpyxl<3.1
+  - python-libsbml<5.20
+  - pip
+  - pip:
+      - sbmltoodepy==1.0.4
