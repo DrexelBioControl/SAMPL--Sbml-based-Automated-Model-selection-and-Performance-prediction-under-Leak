@@ -6,7 +6,6 @@
 From the project folder, run:
 
 ```powershell
-conda activate SBMLtoODEpyWorkflow
 python .\Run_SAMPL.py
 ```
 
