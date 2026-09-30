@@ -1,5 +1,5 @@
 # `SAMPLE-CRN`: `S`emi `A`utomated `M`odel selection and `P`erformance prediction for `L`eaky `E`xperimental `C`hemical `R`eaction `N`etworks
-## _A Python workflow for fitting, selecting, and predicting the performance of leaky biochemical circuits._
+## _A Python workflow for model selection, model validation, and performance prediction of leaky biochemical circuits._
 
 Code 1 fits experimental time courses using candidate SBML models and selects
 a model. Code 2 uses the selected model and fitted parameters to calculate a
