@@ -1,4 +1,5 @@
-# `SAMPLE-CRN`: `S`emi `A`utomated `M`odel selection and `P`erformance prediction for `L`eaky `E`xperimental `C`hemical `R`eaction `N`etworks
+# `SAMPLE-CRN`: 
+# `S`emi `A`utomated `M`odel selection and `P`erformance prediction for `L`eaky `E`xperimental `C`hemical `R`eaction `N`etworks
 ## _A Python workflow for model selection, model validation, and performance prediction of leaky biochemical circuits._
 
 ## Start the workflow
