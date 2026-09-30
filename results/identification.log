@@ -1,0 +1,68 @@
+
+Code 1 | Figure2D_compare_all_SBML_models | mode=fit
+Settings: C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results\fitting_settings.json
+Data: testdata2D.xlsx | sheet=Sheet1
+Models: ModelA_Base, ModelB_BaseDecay, ModelC_ActivegateFuel
+
+Fitting conditions: 6
+  Condition1: 449 points
+  Condition2: 153 points
+  Condition3: 162 points
+  Condition4: 168 points
+  Condition5: 176 points
+  Condition6: 352 points
+Held-out conditions: 0
+
+Model 1/3: ModelA_Base
+Fitting 5 parameters from 8 Sobol starts.
+  Start 1/8 | cost = 2.2231e-01 | success = True
+  Start 2/8 | cost = 2.2231e-01 | success = True
+  Start 3/8 | cost = 2.2231e-01 | success = True
+  Start 4/8 | cost = 2.2229e-01 | success = True
+  Start 5/8 | cost = 2.2236e-01 | success = True
+  Start 6/8 | cost = 2.2230e-01 | success = True
+  Start 7/8 | cost = 2.2231e-01 | success = True
+  Start 8/8 | cost = 2.2232e-01 | success = True
+
+Model 2/3: ModelB_BaseDecay
+Fitting 5 parameters from 8 Sobol starts.
+  Start 1/8 | cost = 2.2209e-01 | success = True
+  Start 2/8 | cost = 2.2215e-01 | success = True
+  Start 3/8 | cost = 2.2224e-01 | success = True
+  Start 4/8 | cost = 2.2209e-01 | success = True
+  Start 5/8 | cost = 2.2214e-01 | success = True
+  Start 6/8 | cost = 2.2211e-01 | success = True
+  Start 7/8 | cost = 2.2211e-01 | success = True
+  Start 8/8 | cost = 2.2209e-01 | success = True
+
+Model 3/3: ModelC_ActivegateFuel
+Fitting 8 parameters from 8 Sobol starts.
+C:\Users\namhn\anaconda3\envs\SBMLtoODEpyWorkflow\lib\site-packages\sbmltoodepy\modelclasses.py:208: Warning: Attempted to set a constant species
+  warnings.warn("Attempted to set a constant species", Warning)
+  Start 1/8 | cost = 8.7050e-03 | success = True
+  Start 2/8 | cost = 5.7699e-02 | success = True
+  Start 3/8 | cost = 9.3431e-03 | success = True
+  Start 4/8 | cost = 2.3194e-01 | success = True
+  Start 5/8 | cost = 1.2073e-01 | success = True
+  Start 6/8 | cost = 2.3459e-01 | success = True
+  Start 7/8 | cost = 2.3762e-01 | success = True
+  Start 8/8 | cost = 1.8953e-02 | success = True
+
+ModelA_Base: global nRMSE=1.745029e-02
+  Calculating cost landscapes for ModelA_Base...
+
+ModelB_BaseDecay: global nRMSE=1.744236e-02
+  Calculating cost landscapes for ModelB_BaseDecay...
+
+ModelC_ActivegateFuel: global nRMSE=3.453211e-03
+  Calculating cost landscapes for ModelC_ActivegateFuel...
+
+Model comparison:
+ rank                 model  global_normalized_rmse  optimizer_success
+    1 ModelC_ActivegateFuel                0.003453               True
+    2      ModelB_BaseDecay                0.017442               True
+    3           ModelA_Base                0.017450               True
+
+Selected model: ModelC_ActivegateFuel
+Results: C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results
+Figures: C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\figures

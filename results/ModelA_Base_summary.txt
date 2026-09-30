@@ -1,0 +1,50 @@
+RUN SUMMARY
+============================================================
+
+Run name       : Figure2D_compare_all_SBML_models
+Model          : ModelA_Base
+SBML file      : C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\models\ModelA_Base.xml
+Mode           : fit
+Fit conditions : ['Condition1', 'Condition2', 'Condition3', 'Condition4', 'Condition5', 'Condition6']
+Held-out conditions: []
+Fit parameters : ['ktx__', 'kmat__', 'kx__', 'krev__', 'krep__']
+N starts       : 8
+Random seed    : 1
+Observable     : rnadna_ReporterOut_2
+Time conversion: 60.0 model units per minute
+
+BEST-FIT PARAMETERS
+------------------------------------------------------------
+ktx__                = 1.75425077e-02
+kmat__               = 4.94331958e-03
+kx__                 = 1.35480140e-06
+krev__               = 8.09999888e-07
+krep__               = 3.33333867e-06
+
+FIT STATISTICS
+------------------------------------------------------------
+Best cost (0.5 * SSE)  = 2.22294286e-01
+Global normalized RMSE = 1.74502928e-02
+Optimizer success      = True
+Optimizer message      = `ftol` termination condition is satisfied.
+
+RMSE PER DATASET
+------------------------------------------------------------
+Condition1               | RMSE=1.07860406e+02 | nRMSE=6.60967476e-01
+Condition2               | RMSE=2.27664543e+01 | nRMSE=4.79667844e-02
+Condition3               | RMSE=1.91526930e+01 | nRMSE=4.02863768e-02
+Condition4               | RMSE=1.90923501e+01 | nRMSE=4.02613970e-02
+Condition5               | RMSE=1.15398684e+01 | nRMSE=2.44828127e-02
+Condition6               | RMSE=1.88041624e+01 | nRMSE=3.95774527e-02
+
+HELD-OUT PREDICTION RMSE
+------------------------------------------------------------
+None
+
+BOUNDARY PROXIMITY
+------------------------------------------------------------
+ktx__           | value=1.75425077e-02 | scale=log10 | not within 5% of bound
+kmat__          | value=4.94331958e-03 | scale=log10 | not within 5% of bound
+kx__            | value=1.35480140e-06 | scale=log10 | not within 5% of bound
+krev__          | value=8.09999888e-07 | scale=log10 | near upper bound
+krep__          | value=3.33333867e-06 | scale=log10 | near lower bound

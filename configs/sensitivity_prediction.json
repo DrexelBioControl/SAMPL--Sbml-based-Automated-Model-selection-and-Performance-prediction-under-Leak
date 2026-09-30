@@ -1,0 +1,53 @@
+{
+  "description": "ROL versus basal_frac. metric.settings.response_property selects steady_state or output_plateau. Code 2 calculates the requested property before the sensitivity formula.",
+  "selected_model_file": "results/selected_model.json",
+  "model_interfaces_file": "configs/model_interfaces.json",
+  "observable_id": "ROL",
+  "analysis_control": {
+    "type": "parameter",
+    "id": "basal_frac"
+  },
+  "initial_species_overrides": {
+    "IN_temp": 2.5
+  },
+  "fixed_parameters": {},
+  "metric": {
+    "name": "steady_state_sensitivity",
+    "definition_file": "metrics/sensitivity.py",
+    "settings": {
+      "concentration_floor": 1e-08,
+      "absolute": false,
+      "response_property": "output_plateau"
+    }
+  },
+  "control_values": {
+    "include_fitted_value": true,
+    "values": {
+      "start": 0.005,
+      "stop": 0.05,
+      "points": 41,
+      "spacing": "linear"
+    },
+    "label": "basal_frac",
+    "units": ""
+  },
+  "model_time_units_per_minute": 60,
+  "rtol": 1e-08,
+  "atol": 1e-10,
+  "sweep_parameter": null,
+  "sweep_values": null,
+  "figures_dir": "figures",
+  "results_dir": "results",
+  "output_prefix": "",
+  "generated_models_dir": "generated_models",
+  "limit_settings": {
+    "plateau_extension_factor": 2,
+    "max_time_min": 5000,
+    "check_interval_min": 100,
+    "consecutive_checks": 3,
+    "samples_per_check": 9,
+    "rate_tolerance": 1e-08,
+    "change_atol": 1e-06,
+    "change_rtol": 1e-06
+  }
+}

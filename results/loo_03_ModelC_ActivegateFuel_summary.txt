@@ -1,0 +1,61 @@
+RUN SUMMARY
+============================================================
+
+Run name       : Figure2D_compare_all_SBML_models
+Model          : ModelC_ActivegateFuel
+SBML file      : C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results\selected_model.xml
+Mode           : fit
+Fit conditions : ['Condition1', 'Condition2', 'Condition4', 'Condition5', 'Condition6']
+Held-out conditions: ['Condition3']
+Fit parameters : ['k_txn', 'ksd', 'kfsd', 'krev', 'kf_rep', 'kRz', 'klkg', 'basal_frac']
+N starts       : 8
+Random seed    : 1
+Observable     : ROL
+Time conversion: 60.0 model units per minute
+
+BEST-FIT PARAMETERS
+------------------------------------------------------------
+ktx__                = 1.30000000e-02
+kmat__               = 4.17000000e-03
+kx__                 = 1.00000000e-06
+krev__               = 2.70000000e-07
+krep__               = 1.00000000e-05
+k_txn                = 1.25069937e-02
+ksd                  = 1.60040548e-06
+kfsd                 = 2.97392907e-07
+krev                 = 6.68324923e-06
+kf_rep               = 1.09764539e-05
+kRz                  = 4.06799972e-03
+klkg                 = 8.85705335e-06
+basal_frac           = 2.91556370e-02
+
+FIT STATISTICS
+------------------------------------------------------------
+Best cost (0.5 * SSE)  = 7.85025067e-03
+Global normalized RMSE = 3.47791861e-03
+Optimizer success      = True
+Optimizer message      = `ftol` termination condition is satisfied.
+
+RMSE PER DATASET
+------------------------------------------------------------
+Condition1               | RMSE=1.60362674e+01 | nRMSE=9.82700840e-02
+Condition2               | RMSE=2.37051789e+01 | nRMSE=4.99445891e-02
+Condition4               | RMSE=1.66527842e+01 | nRMSE=3.51169107e-02
+Condition5               | RMSE=1.42764901e+01 | nRMSE=3.02887886e-02
+Condition6               | RMSE=1.77674560e+01 | nRMSE=3.73954784e-02
+
+HELD-OUT PREDICTION RMSE
+------------------------------------------------------------
+Condition3               | RMSE=1.97154910e+01 | nRMSE=4.14701839e-02
+Combined held-out nRMSE = 4.14701839e-02
+
+BOUNDARY PROXIMITY
+------------------------------------------------------------
+k_txn           | value=1.25069937e-02 | scale=log10 | not within 5% of bound
+ksd             | value=1.60040548e-06 | scale=log10 | not within 5% of bound
+kfsd            | value=2.97392907e-07 | scale=log10 | near lower bound
+krev            | value=6.68324923e-06 | scale=log10 | not within 5% of bound
+kf_rep          | value=1.09764539e-05 | scale=log10 | not within 5% of bound
+kRz             | value=4.06799972e-03 | scale=log10 | near lower bound
+klkg            | value=8.85705335e-06 | scale=log10 | not within 5% of bound
+basal_frac      | value=2.91556370e-02 | scale=linear | near lower bound

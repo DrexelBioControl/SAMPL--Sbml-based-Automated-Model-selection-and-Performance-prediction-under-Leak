@@ -1,0 +1,23 @@
+{
+  "fitting_settings_source": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\configs\\fit_all_models.json",
+  "identification_mode": "fit",
+  "previous_selection_file": null,
+  "prediction_settings_source": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\configs\\amplification_prediction.json",
+  "loo_conditions": [
+    "Condition1",
+    "Condition2",
+    "Condition3",
+    "Condition4",
+    "Condition5",
+    "Condition6"
+  ],
+  "completed_steps": [
+    "model_identification",
+    "loo",
+    "performance_prediction"
+  ],
+  "status": "completed",
+  "selected_model_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\selected_model.json",
+  "loo_summary_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\ModelC_ActivegateFuel_loo_summary.csv",
+  "prediction_settings_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\ModelC_ActivegateFuel_amplification.settings.json"
+}

@@ -1,0 +1,130 @@
+{
+  "model_name": "ModelC_ActivegateFuel",
+  "model_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\selected_model.xml",
+  "validation_scope": "Selected-model LOO: the model identity is fixed before these folds; model selection is not cross-validated.",
+  "condition_pool": [
+    "Condition1",
+    "Condition2",
+    "Condition3",
+    "Condition4",
+    "Condition5",
+    "Condition6"
+  ],
+  "number_of_folds": 6,
+  "folds": [
+    {
+      "fold": 1,
+      "model": "ModelC_ActivegateFuel",
+      "held_out_condition": "Condition1",
+      "fit_conditions": [
+        "Condition2",
+        "Condition3",
+        "Condition4",
+        "Condition5",
+        "Condition6"
+      ],
+      "raw_rmse": 68.10687472852563,
+      "normalized_rmse": 0.4173582378817903,
+      "training_normalized_rmse": 0.0026175566719168603,
+      "optimizer_success": true,
+      "config_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_01_fitting_settings.json",
+      "results_dir": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results",
+      "fit_results_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_01_ModelC_ActivegateFuel_fit.npz"
+    },
+    {
+      "fold": 2,
+      "model": "ModelC_ActivegateFuel",
+      "held_out_condition": "Condition2",
+      "fit_conditions": [
+        "Condition1",
+        "Condition3",
+        "Condition4",
+        "Condition5",
+        "Condition6"
+      ],
+      "raw_rmse": 23.973847522187683,
+      "normalized_rmse": 0.050510648760391394,
+      "training_normalized_rmse": 0.003377992834617008,
+      "optimizer_success": true,
+      "config_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_02_fitting_settings.json",
+      "results_dir": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results",
+      "fit_results_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_02_ModelC_ActivegateFuel_fit.npz"
+    },
+    {
+      "fold": 3,
+      "model": "ModelC_ActivegateFuel",
+      "held_out_condition": "Condition3",
+      "fit_conditions": [
+        "Condition1",
+        "Condition2",
+        "Condition4",
+        "Condition5",
+        "Condition6"
+      ],
+      "raw_rmse": 19.715491000084512,
+      "normalized_rmse": 0.04147018386649749,
+      "training_normalized_rmse": 0.003477918605049216,
+      "optimizer_success": true,
+      "config_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_03_fitting_settings.json",
+      "results_dir": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results",
+      "fit_results_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_03_ModelC_ActivegateFuel_fit.npz"
+    },
+    {
+      "fold": 4,
+      "model": "ModelC_ActivegateFuel",
+      "held_out_condition": "Condition4",
+      "fit_conditions": [
+        "Condition1",
+        "Condition2",
+        "Condition3",
+        "Condition5",
+        "Condition6"
+      ],
+      "raw_rmse": 19.020657451884787,
+      "normalized_rmse": 0.04011021356914205,
+      "training_normalized_rmse": 0.003522676860013378,
+      "optimizer_success": true,
+      "config_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_04_fitting_settings.json",
+      "results_dir": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results",
+      "fit_results_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_04_ModelC_ActivegateFuel_fit.npz"
+    },
+    {
+      "fold": 5,
+      "model": "ModelC_ActivegateFuel",
+      "held_out_condition": "Condition5",
+      "fit_conditions": [
+        "Condition1",
+        "Condition2",
+        "Condition3",
+        "Condition4",
+        "Condition6"
+      ],
+      "raw_rmse": 20.408076084680726,
+      "normalized_rmse": 0.04329746998399394,
+      "training_normalized_rmse": 0.003545225138129227,
+      "optimizer_success": true,
+      "config_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_05_fitting_settings.json",
+      "results_dir": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results",
+      "fit_results_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_05_ModelC_ActivegateFuel_fit.npz"
+    },
+    {
+      "fold": 6,
+      "model": "ModelC_ActivegateFuel",
+      "held_out_condition": "Condition6",
+      "fit_conditions": [
+        "Condition1",
+        "Condition2",
+        "Condition3",
+        "Condition4",
+        "Condition5"
+      ],
+      "raw_rmse": 64.63273797089803,
+      "normalized_rmse": 0.13603366472859849,
+      "training_normalized_rmse": 0.0036339986982900758,
+      "optimizer_success": true,
+      "config_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_06_fitting_settings.json",
+      "results_dir": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results",
+      "fit_results_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\loo_06_ModelC_ActivegateFuel_fit.npz"
+    }
+  ]
+}
