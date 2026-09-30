@@ -1,0 +1,35 @@
+
+Code 1 | Figure2D_compare_all_SBML_models | mode=fit
+Settings: C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results\loo_01_fitting_settings.json
+Data: testdata2D.xlsx | sheet=Sheet1
+Models: selected_model
+
+Fitting conditions: 5
+  Condition2: 153 points
+  Condition3: 162 points
+  Condition4: 168 points
+  Condition5: 176 points
+  Condition6: 352 points
+Held-out conditions: 1
+  Condition1: 449 points
+
+Model 1/1: ModelC_ActivegateFuel
+Fitting 8 parameters from 8 Sobol starts.
+C:\Users\namhn\anaconda3\envs\SBMLtoODEpyWorkflow\lib\site-packages\sbmltoodepy\modelclasses.py:208: Warning: Attempted to set a constant species
+  warnings.warn("Attempted to set a constant species", Warning)
+  Start 1/8 | cost = 3.4635e-03 | success = True
+  Start 2/8 | cost = 3.7877e-02 | success = True
+  Start 3/8 | cost = 5.3602e-03 | success = True
+  Start 4/8 | cost = 3.4905e-03 | success = True
+  Start 5/8 | cost = 1.4675e-02 | success = True
+  Start 6/8 | cost = 1.7512e-02 | success = True
+  Start 7/8 | cost = 1.8730e-02 | success = True
+  Start 8/8 | cost = 3.4635e-03 | success = True
+
+ModelC_ActivegateFuel: global nRMSE=2.617557e-03
+  Held-out nRMSE=4.173582e-01
+  Calculating cost landscapes for ModelC_ActivegateFuel...
+
+Fit completed. Scores: loo_01_fit_scores.csv
+Results: C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results
+Figures: C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\figures

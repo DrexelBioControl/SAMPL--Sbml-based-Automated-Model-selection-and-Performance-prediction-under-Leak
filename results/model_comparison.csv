@@ -1,0 +1,4 @@
+model,model_file,number_of_fitted_parameters,best_cost,global_normalized_rmse,held_out_normalized_rmse,optimizer_success,rank,selected
+ModelC_ActivegateFuel,ModelC_ActivegateFuel.xml,8,0.008705008807381818,0.0034532114906494185,,True,1,True
+ModelB_BaseDecay,ModelB_BaseDecay.xml,5,0.2220921149935928,0.01744235574582246,,True,2,False
+ModelA_Base,ModelA_Base.xml,5,0.22229428573119825,0.01745029283936873,,True,3,False

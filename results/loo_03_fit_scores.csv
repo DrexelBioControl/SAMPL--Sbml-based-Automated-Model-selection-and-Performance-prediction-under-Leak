@@ -1,0 +1,2 @@
+model,model_file,number_of_fitted_parameters,best_cost,global_normalized_rmse,held_out_normalized_rmse,optimizer_success
+ModelC_ActivegateFuel,selected_model.xml,8,0.007850250667352517,0.003477918605049216,0.04147018386649749,True

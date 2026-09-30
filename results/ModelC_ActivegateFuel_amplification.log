@@ -1,0 +1,28 @@
+Loaded metric         : amplification
+Metric definition     : C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\metrics\amplification.py
+Loaded selected model : ModelC_ActivegateFuel
+Loaded SBML           : C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results\selected_model.xml
+Loaded fit            : C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results\ModelC_ActivegateFuel_fit.npz
+
+Best-fit parameters:
+k_txn                = 1.25768685e-02
+ksd                  = 1.60577085e-06
+kfsd                 = 9.99789351e-03
+krev                 = 5.53531998e-06
+kf_rep               = 9.93823586e-06
+kRz                  = 4.06799972e-03
+klkg                 = 8.85705335e-06
+basal_frac           = 2.90419668e-02
+Model interface file  : C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\configs\model_interfaces.json
+Requested calculations: on_rates, off_rates, reference_on, reference_off
+Computing basal_frac = 1.00e-02
+C:\Users\namhn\anaconda3\envs\SBMLtoODEpyWorkflow\lib\site-packages\sbmltoodepy\modelclasses.py:208: Warning: Attempted to set a constant species
+  warnings.warn("Attempted to set a constant species", Warning)
+Computing basal_frac = 3.00e-02
+Computing basal_frac = 1.00e-01
+Saved figure -> C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\figures\ModelC_ActivegateFuel_amplification.png
+Saved metric values -> C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results\ModelC_ActivegateFuel_amplification.npz
+Saved run settings  -> C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results\ModelC_ActivegateFuel_amplification.settings.json
+Saved model interface -> C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\results\ModelC_ActivegateFuel_amplification.model_interface.json
+C:\Users\namhn\GitHub Projects\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\Code2_MasterSBMLPrediction_GeneralInterfaces.py:920: UserWarning: Matplotlib is currently using agg, which is a non-GUI backend, so cannot show the figure.
+  plt.show()                                                                                                                           #|

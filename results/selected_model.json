@@ -1,0 +1,34 @@
+{
+  "run_name": "Figure2D_compare_all_SBML_models",
+  "selection_metric": "global_normalized_rmse",
+  "model_name": "ModelC_ActivegateFuel",
+  "model_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\models\\ModelC_ActivegateFuel.xml",
+  "archived_model_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\selected_model.xml",
+  "fit_conditions": [
+    "Condition1",
+    "Condition2",
+    "Condition3",
+    "Condition4",
+    "Condition5",
+    "Condition6"
+  ],
+  "all_conditions": [
+    "Condition1",
+    "Condition2",
+    "Condition3",
+    "Condition4",
+    "Condition5",
+    "Condition6"
+  ],
+  "fit_results_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\ModelC_ActivegateFuel_fit.npz",
+  "fitted_parameters_file": "C:\\Users\\namhn\\GitHub Projects\\SAMPL--Sbml-based-Automated-Model-selection-and-Performance-prediction-under-Leak\\results\\ModelC_ActivegateFuel_parameters.csv",
+  "global_normalized_rmse": 0.0034532114906494185,
+  "held_out_normalized_rmse": null,
+  "observable_id": "ROL",
+  "species_aliases": {
+    "dna_Input_1": "IN_temp",
+    "dna_Gate_1_2": "RSD_temp",
+    "dna_Reporter_2": "DRL"
+  },
+  "model_time_units_per_minute": 60.0
+}
