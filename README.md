@@ -1,4 +1,4 @@
-# `SAMPL`: `S`BML-based `A`utomated `M`odel selection and `P`erformance prediction under `L`eak
+# `SAMPLE-CRN`: `S`emi `A`utomated `M`odel selection and `P`erformance prediction for `L`eaky `E`xperimental `C`hemical `R`eaction `N`etworks
 ## _A Python workflow for fitting, selecting, and predicting the performance of leaky biochemical circuits._
 
 Code 1 fits experimental time courses using candidate SBML models and selects
