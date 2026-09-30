@@ -1,0 +1,37 @@
+{
+  "ModelA_Base": {
+    "input_control": {
+      "type": "species_initial_concentration",
+      "id": "dna_Input_1"
+    },
+    "default_initial_species": {
+      "dna_Gate_1_2": 25,
+      "dna_Reporter_2": 500
+    }
+  },
+  "ModelB_BaseDecay": {
+    "input_control": {
+      "type": "species_initial_concentration",
+      "id": "dna_Input_1"
+    },
+    "default_initial_species": {
+      "dna_Gate_1_2": 25,
+      "dna_Reporter_2": 500
+    },
+    "default_fixed_parameters": {
+      "k_test_decay": 0.0001
+    }
+  },
+  "ModelC_ActivegateFuel": {
+    "input_control": {
+      "type": "species_initial_concentration",
+      "id": "IN_temp"
+    },
+    "default_initial_species": {
+      "RSD_temp": 25,
+      "DRL": 500,
+      "F_temp": 0
+    },
+    "default_observable_units": "nM"
+  }
+}

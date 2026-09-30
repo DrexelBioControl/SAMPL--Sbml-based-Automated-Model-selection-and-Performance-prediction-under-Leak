@@ -1,0 +1,57 @@
+{
+  "selected_model_file": "results/selected_model.json",
+  "model_interfaces_file": "configs/model_interfaces.json",
+  "observable_id": "ROL",
+  "analysis_control": {
+    "type": "species_initial_concentration",
+    "id": "F_temp"
+  },
+  "initial_species_overrides": {},
+  "fixed_parameters": {},
+  "metric": {
+    "name": "amplification",
+    "definition_file": "metrics/amplification.py",
+    "settings": {
+      "rate_floor": 1e-08,
+      "input_values": {
+        "on_value": 2.5,
+        "off_value": 0,
+        "label": "Input",
+        "units": "nM"
+      },
+      "reference_value": 0
+    }
+  },
+  "control_values": {
+    "values": {
+      "start": 0,
+      "stop": 50,
+      "points": 51
+    },
+    "values_to_plot": [
+      1,
+      3,
+      5,
+      10,
+      30,
+      50
+    ],
+    "label": "Fuel template",
+    "units": "nM"
+  },
+  "time_end_min": 200,
+  "time_points": 1000,
+  "model_time_units_per_minute": 60,
+  "rtol": 1e-06,
+  "atol": 1e-06,
+  "sweep_parameter": "basal_frac",
+  "sweep_values": [
+    0.01,
+    0.03,
+    0.1
+  ],
+  "figures_dir": "figures",
+  "results_dir": "results",
+  "output_prefix": "",
+  "generated_models_dir": "generated_models"
+}
